@@ -1,20 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Reply Raiders
 
-# Run and deploy your AI Studio app
+**Reply Raiders** is a fast-paced, hilarious, and addictive reply battle game built with React, Vite, and Wagmi. You are a **Reply Raider** — a digital warrior who raids chaotic inboxes, group chats, and comment sections. Your mission is to craft the funniest, savage, or most epic replies to defeat toxic users, trolls, and spam.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/a22c0464-5d07-436a-8185-7b28f5869992
+- **Quick-tap reply battles**: Messages and comments fly at you rapidly.
+- **Savage/funny/smart replies**: Choose from multiple reply options.
+- **Timing + combo system**: Perfect timed replies create devastating "Roasts" and "Burns".
+- **Toxicity Meter**: Keep the chat from getting too toxic to survive.
+- **On-Chain Elements**: Features ERC-8004 Trustless Agents integration and ERC-8021 Transaction Attribution on Base Mainnet.
+  - Submit your high scores on-chain!
+  - Integrated "Say GM" feature.
 
-## Run Locally
+## Development
 
-**Prerequisites:**  Node.js
+Install dependencies:
+```bash
+npm install
+```
 
+Start the development server:
+```bash
+npm run dev
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Build for production:
+```bash
+npm run build
+```
+
+## AI Agent / MCP Integration
+
+This project includes an **ERC-8004 AI Agent** configuration and an **MCP API**.
+- Agent Info: `/.well-known/agent-card.json`
+- MCP Endpoint: `/api/mcp`
+- Agent API: `/api/agent`
+
+## Notice
+
+This project does not contain any sensitive variables or credentials in the source code.
