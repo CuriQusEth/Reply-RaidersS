@@ -1,41 +1,46 @@
-# Reply Raiders
+# Reply Raiders Orchestrator
 
-**Reply Raiders** is a fast-paced, hilarious, and addictive reply battle game built with React, Vite, and Wagmi. You are a **Reply Raider** — a digital warrior who raids chaotic inboxes, group chats, and comment sections. Your mission is to craft the funniest, savage, or most epic replies to defeat toxic users, trolls, and spam.
+**Reply Raiders** is a fast-paced, hilarious, and addictive reply battle game. You are a **Reply Raider** — a digital warrior who raids chaotic inboxes, group chats, and comment sections. Your mission is to craft the funniest, savage, or most epic replies to defeat toxic users, trolls, and spam.
 
-## Features
+## Project Overview
 
-- **Quick-tap reply battles**: Messages and comments fly at you rapidly.
-- **Savage/funny/smart replies**: Choose from multiple reply options.
-- **Timing + combo system**: Perfect timed replies create devastating "Roasts" and "Burns".
-- **Toxicity Meter**: Keep the chat from getting too toxic to survive.
-- **On-Chain Elements**: Features ERC-8004 Trustless Agents integration and ERC-8021 Transaction Attribution on Base Mainnet.
-  - Submit your high scores on-chain!
-  - Integrated "Say GM" feature.
+- **App Name:** Reply Raiders Orchestrator
+- **Version:** 1.0.0
+- **App URL:** https://reply-raiders-s.vercel.app/
 
-## Development
+## Capabilities & Skills
+- Core capabilities: `reply-management`, `engagement-automation`, `multi-platform-raiding`, `smart-response-generation`, `comment-orchestration`, `mcp-command-execution`
 
-Install dependencies:
-```bash
-npm install
-```
+## Tech Stack
+- Framework: Next.js 14 App Router (configured for API endpoints), React, Wagmi, viem, Tailwind CSS
+- Network: Base (`eip155:8453`)
 
-Start the development server:
-```bash
-npm run dev
-```
+## MCP Connection Guide
 
-Build for production:
-```bash
-npm run build
-```
+This application provides a Model Context Protocol (MCP) endpoint to execute active commands and interact with AI tools.
 
-## AI Agent / MCP Integration
+- **MCP Endpoint URL:** `https://reply-raiders-s.vercel.app/api/mcp`
+- Connect your MCP client via a POST request to send commands.
+- **[PLACEHOLDER]** You will need to implement specific tools (`get_race_status`, `start_race`, `get_leaderboard`, `optimize_speed`, `get_track_info`) in the MCP server if required.
 
-This project includes an **ERC-8004 AI Agent** configuration and an **MCP API**.
-- Agent Info: `/.well-known/agent-card.json`
-- MCP Endpoint: `/api/mcp`
-- Agent API: `/api/agent`
+## Agent Registration Info
 
-## Notice
+- **Agent Name:** Reply Raiders Orchestrator
+- **Registration Standard:** ERC-8004
+- **Agent Card URL:** `https://reply-raiders-s.vercel.app/.well-known/agent-card.json`
+- **Agent API Endpoint:** `https://reply-raiders-s.vercel.app/api/agent`
 
-This project does not contain any sensitive variables or credentials in the source code.
+## How to Run Locally
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```

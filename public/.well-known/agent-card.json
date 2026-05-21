@@ -27,13 +27,37 @@
       "description": "Main agent control API"
     }
   ],
-  "capabilities": [
-    "reply-management",
-    "engagement-automation",
-    "multi-platform-raiding",
-    "smart-response-generation",
-    "comment-orchestration",
-    "mcp-command-execution"
+  "skills": [
+    {
+      "id": "reply-management",
+      "name": "Reply Management",
+      "description": "Manage user replies effectively"
+    },
+    {
+      "id": "engagement-automation",
+      "name": "Engagement Automation",
+      "description": "Automate user engagement"
+    },
+    {
+      "id": "multi-platform-raiding",
+      "name": "Multi-Platform Raiding",
+      "description": "Raid across multiple platforms"
+    },
+    {
+      "id": "smart-response-generation",
+      "name": "Smart Response Generation",
+      "description": "Generate smart responses"
+    },
+    {
+      "id": "comment-orchestration",
+      "name": "Comment Orchestration",
+      "description": "Orchestrate comments across threads"
+    },
+    {
+      "id": "mcp-command-execution",
+      "name": "MCP Command Execution",
+      "description": "Execute Model Context Protocol commands"
+    }
   ],
   "supportedChains": ["eip155:8453"],
   "active": true,
