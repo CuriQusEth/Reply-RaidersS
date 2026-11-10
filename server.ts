@@ -17,6 +17,8 @@ async function startServer() {
       version: "1.0.0",
       name: "Reply Raiders MCP Endpoint",
       status: "active",
+      network: "Base Mainnet (Denim 200ms)",
+      chainId: 8453,
       description: "Active MCP server for Reply Raiders Orchestrator Agent",
       capabilities: ["reply-management", "engagement-automation", "smart-response-generation"],
       timestamp: new Date().toISOString()
@@ -30,6 +32,7 @@ async function startServer() {
         status: "success",
         message: "MCP command received",
         agent: "Reply Raiders Orchestrator",
+        network: "Base Mainnet (Denim)",
         receivedAt: new Date().toISOString(),
         payload: body
       });
@@ -45,6 +48,10 @@ async function startServer() {
       status: "active",
       wallet: "0x29536D0bc1004ab274c4F0F59734Ad74D4559b7B",
       platform: "Reply Raiders",
+      network: "Base Mainnet",
+      chainId: 8453,
+      upgrade: "Denim",
+      blockTimeMs: 200,
       version: "1.0.0"
     });
   });

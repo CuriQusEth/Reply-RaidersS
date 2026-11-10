@@ -62,8 +62,8 @@ export const GameOverScreen = ({ engine }: GameOverScreenProps) => {
 
                 <div className="w-full space-y-4">
                     {submitted ? (
-                        <div className="w-full p-4 bg-green-500/10 border border-green-500/50 rounded-xl text-center text-green-400 font-mono font-bold">
-                            ✅ Score recorded on Base Mainnet
+                        <div className="w-full p-4 bg-green-500/10 border border-green-500/50 rounded-xl text-center text-green-400 font-mono font-bold text-sm">
+                            ✅ Score recorded on Base Mainnet (Denim 200ms Block)
                         </div>
                     ) : (
                         <motion.button

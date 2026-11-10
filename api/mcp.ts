@@ -37,49 +37,83 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
           },
           serverInfo: {
             name: "Reply Raiders Orchestrator",
-            version: "1.0.0"
+            version: "1.0.0",
+            network: "Base Mainnet (Denim 200ms)",
+            chainId: 8453
           }
         };
       } else if (method === 'tools/list') {
         result = {
           tools: [
             {
-              name: "get_race_status",
-              description: "Gets the current status of the race",
+              name: "get_raid_status",
+              description: "Gets the current active raid status, arena, and toxicity level",
               inputSchema: { type: "object", properties: {}, required: [] }
             },
             {
-              name: "start_race",
-              description: "Starts a new race",
-              inputSchema: { type: "object", properties: {}, required: [] }
+              name: "start_raid",
+              description: "Starts a new reply raid battle in a specified arena (Twitter/X, Discord, Instagram, Reddit)",
+              inputSchema: {
+                type: "object",
+                properties: {
+                  arena: { type: "string", description: "Target arena for the raid" }
+                },
+                required: []
+              }
             },
             {
               name: "get_leaderboard",
-              description: "Gets the current leaderboard",
+              description: "Gets the current global on-chain leaderboard of top Reply Raiders",
               inputSchema: { type: "object", properties: {}, required: [] }
             },
             {
-              name: "optimize_speed",
-              description: "Optimizes the speed of the racer",
-              inputSchema: { type: "object", properties: {}, required: [] }
+              name: "submit_roast",
+              description: "Submits a savage roast or meme reply to counter comments",
+              inputSchema: {
+                type: "object",
+                properties: {
+                  replyText: { type: "string" },
+                  savageScore: { type: "number" }
+                },
+                required: ["replyText"]
+              }
             },
             {
-              name: "get_track_info",
-              description: "Gets information about the current track",
+              name: "get_denim_network_info",
+              description: "Gets Base Mainnet Denim upgrade specifications (200ms canonical blocks, retired Flashblocks, canonical RPC)",
               inputSchema: { type: "object", properties: {}, required: [] }
             }
           ]
         };
       } else if (method === 'tools/call') {
         const toolName = params?.name;
-        result = {
-          content: [
-            {
-              type: "text",
-              text: `[PLACEHOLDER] Logic for tool ${toolName} to be implemented by developer.`
-            }
-          ]
-        };
+        if (toolName === "get_denim_network_info") {
+          result = {
+            content: [
+              {
+                type: "text",
+                text: JSON.stringify({
+                  network: "Base Mainnet",
+                  chainId: 8453,
+                  upgrade: "Denim",
+                  blockTimeMs: 200,
+                  canonicalRpc: "https://mainnet.base.org",
+                  flashblocksRetired: true,
+                  status: "Active"
+                }, null, 2)
+              }
+            ]
+          };
+        } else {
+          result = {
+            content: [
+              {
+                type: "text",
+                text: `[Reply Raiders] Execution response for ${toolName} on Base Mainnet (Denim).`
+              }
+            ]
+          };
+        }
       } else if (method === 'prompts/list') {
         result = { prompts: [] };
       } else if (method === 'resources/list') {

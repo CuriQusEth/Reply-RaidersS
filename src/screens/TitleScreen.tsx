@@ -41,7 +41,11 @@ export const TitleScreen = ({ onStart }: TitleScreenProps) => {
                     <br />
                     RAIDERS
                 </h1>
-                <p className="text-gray-400 font-mono text-sm mb-12 max-w-xs mx-auto">
+                <div className="flex items-center gap-2 px-3 py-1 bg-cyan-950/60 border border-cyan-500/40 rounded-full mb-3 text-[11px] font-mono text-cyan-300">
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Base Mainnet • Denim 200ms
+                </div>
+                <p className="text-gray-400 font-mono text-sm mb-8 max-w-xs mx-auto">
                     The ultimate on-chain reply battle game. Roast, rage, and meme your way to the top.
                 </p>
 

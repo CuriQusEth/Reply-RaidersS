@@ -60,6 +60,15 @@
     }
   ],
   "supportedChains": ["eip155:8453"],
+  "network": {
+    "name": "Base Mainnet",
+    "chainId": 8453,
+    "caip2": "eip155:8453",
+    "upgrade": "Denim",
+    "blockTimeMs": 200,
+    "rpcUrl": "https://mainnet.base.org",
+    "flashblocksRetired": true
+  },
   "active": true,
   "status": "online"
 }
